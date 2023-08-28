@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <style>
+            .face{
+                border:5px solid black;
+                width:400px;
+                height:400px;
+                background-color: yellow;
+                border-radius: 100%;
+                animation-name: box;
+                animation-duration: 10s;
+                margin-left: 250px;
+                margin-top: 150px;
+                
+            }
+            @keyframes box{
+                0%{background-color: pink;}
+                25%{background-color: #057B69;}
+                50%{background-color: #E37959;}
+                75%{background-color: #6B33F8;}
+                100%{background-color: #59E395;}
+
+            }
+            .mouth{
+                position:absolute;
+                background-color: black;
+                width: 200px;
+                height:100px;
+                top:320px;
+                left:110px;
+                border-radius: 10px 10px 100px 100px;
+                transition:transform 1.0s ease-in;
+                margin-top: 120px;
+                margin-left: 240px;
+            }
+            .mouth:hover{
+                transform:scale(0.5);
+            }
+            .eye-section{
+                position:absolute;
+                width:300px;
+                height:100px;  
+                top:150px;
+                left:60px;}
+            .left-eye, .right-eye{
+                background-color: black;
+                height:100px;
+                width:100px;
+                position:absolute;
+                border-radius: 100%;
+                }
+            .right-eye{
+                left:200px;
+                transition:transform 1.0s ease-in-out;
+            }
+            .left-eye{
+                
+                transition:transform 1.0s ease-in-out;
+            }
+            .right-eye:hover{
+                transform:scale(0);
+            }
+            .left-eye:hover{
+                transform:scale(0);
+            }
+
+            .left-eye::before, .right-eye::before{
+                
+                display:block;
+                background-color: white;
+                width:30px;
+                height:30px;
+                position:absolute;
+                top:35px;
+                left:35px;
+                border-radius: 50%;
+            }
+            body{
+                position: absolute;
+            }
+            h1{
+                color: red;
+                text-align: center;
+                margin-left: 200px;
+                font-size: xx-large;
+                
+            }
+            div{
+                text-align: center;
+            }
+            .left-eye{
+                margin-top: 130px;
+                margin-left: 250px;
+            }
+            .right-eye{
+                margin-top: 130px;
+                margin-left: 230px ;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Emoji Animation</h1>
+        <div class="face">
+            <div class="mouth"></div>
+            <div class="eye-section">
+                <div class="left-eye"></div>
+                <div class="right-eye"></div>
+
+            </div>
+        </div>
+        <p><b>Note:</b> Please mouse hover on emoji <mark>righteye,lefteye and mouth</mark></p>
+    </body>
+</html>
